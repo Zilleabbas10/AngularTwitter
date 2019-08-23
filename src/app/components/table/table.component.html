@@ -17,7 +17,7 @@
                       <td>{{tweet.text | truncate : 50 : "..."}}</td>
                       <td class="center">{{tweet.likes == 0 ? '-' : tweet.likes}}</td>
                       <td class="center">{{tweet.replies == 0 ? '-' : tweet.replies}}</td>
-                      <td class="center">{{tweet.retweets}}</td>
+                      <td class="center">{{tweet.retweets == 0 ? '-' : tweet.retweets}}</td>
                       <td class="center">{{tweet.hashtags.length == 0 ? '-' : hashtagLimit(tweet.hashtags)}}</td>
                       <td>{{tweet.date | dateFormat}}</td>
                     </tr>
