@@ -1,0 +1,7 @@
+<div class="mainSearchMain">
+    <span>{{searchType | titlecase}} Search</span>
+    <div class="inputSearch">
+      <input [value]="searchString" (input)="searchString = $event.target.value" type="text" class="form-control" placeholder="Search By {{searchType |titlecase}}">
+        <i [style.color]="searchString.length ? '#686868' : '#DCDCDC'" class="fa fa-search" (click)="searchString.length ? sendSearchString() : null"></i>
+    </div>
+  </div>

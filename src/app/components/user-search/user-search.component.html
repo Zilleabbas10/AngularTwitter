@@ -1,0 +1,9 @@
+<div class="contentMain">
+    <div class="tab-content">
+				<div class="tab-pane fade in active">
+          <app-table-search (searchStringEvent)="receiveSearchString($event)"  [searchType]="searchType"></app-table-search>
+          <app-table [loader]="loader" [tweets]="tweets"></app-table>
+				</div>
+    </div>
+</div>
+
