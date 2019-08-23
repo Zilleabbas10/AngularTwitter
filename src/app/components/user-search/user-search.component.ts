@@ -14,7 +14,7 @@ export class UserSearchComponent implements OnInit {
   public loader: boolean = false;
 
   constructor(private twitterService: TwitterService) { 
-    console.log("UserSearchComponent");
+    //console.log("UserSearchComponent");
    }
 
   ngOnInit() {
@@ -24,10 +24,10 @@ export class UserSearchComponent implements OnInit {
 
   getTweetsByUsers(user){
     this.twitterService.getTweetsByUsers(user).subscribe((data) => {
-      console.log(data);
+      //console.log(data);
       this.loader = true;
       this.tweets = data;
-      console.log(this.tweets);
+      //console.log(this.tweets);
     });
   }
 

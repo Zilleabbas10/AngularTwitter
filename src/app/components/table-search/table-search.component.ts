@@ -12,11 +12,11 @@ export class TableSearchComponent implements OnInit {
   public searchString: string = ''
 
   constructor() { 
-    console.log('TableSearchComponent');
+    //console.log('TableSearchComponent');
    }
 
   ngOnInit() {
-    console.log(this.searchType)
+    //console.log(this.searchType)
   }
 
   sendSearchString() {
