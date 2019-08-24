@@ -7,20 +7,19 @@ import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
 export class TwitterService {
 
   public url : string = 'http://am-twitter-scrape.herokuapp.com' 
+  public headers : any;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.headers = new HttpHeaders();
+    this.headers.append('Accept', 'application/json');
+    this.headers.append('Content-Type', 'application/json');
+  }
 
   public getTweetsByUsers(user) {
-    let headers = new HttpHeaders();
-    headers = headers.append('Accept', 'application/json');
-    headers = headers.append('Content-Type', 'application/json');
     return this.http.get<any[]>( `${this.url}/users/${user}?pages_limit=3&wait=0`);
   }
 
   public getTweetsByHastags(hashtag) {
-    let headers = new HttpHeaders();
-      headers = headers.set('Accept', 'application/json');
-      headers = headers.set('Content-Type', 'application/json');
     return this.http.get<any[]>( `${this.url}/hashtags/${hashtag}?pages_limit=3&wait=0`);
   }
 

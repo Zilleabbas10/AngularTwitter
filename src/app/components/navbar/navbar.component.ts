@@ -8,7 +8,8 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  public activatedTab: string = 'hashtag'; 
+  public activatedTab : string = 'hashtag'; 
+  public title : string = 'Angular Twitter';
 
   constructor() {
    }
