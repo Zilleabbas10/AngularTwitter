@@ -13,6 +13,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { TableSearchComponent } from './components/table-search/table-search.component';
 import { TableComponent } from './components/table/table.component';
 import { DateFormatPipe } from './pipes/date-format.pipe';
+import { HashtagLimitPipe } from './pipes/hashtag-limit.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DateFormatPipe } from './pipes/date-format.pipe';
     NavbarComponent,
     TableSearchComponent,
     TableComponent,
-    DateFormatPipe
+    DateFormatPipe,
+    HashtagLimitPipe
   ],
   imports: [
     BrowserModule,

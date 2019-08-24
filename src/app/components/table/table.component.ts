@@ -14,15 +14,6 @@ export class TableComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    //console.log(this.tweets);
-  }
-
-  hashtagLimit(hastags){
-    if(hastags.length > 2){
-      return `${hastags[0]}, ${hastags[1]}`;
-    }else{
-      return hastags;
-    }
   }
 
 }

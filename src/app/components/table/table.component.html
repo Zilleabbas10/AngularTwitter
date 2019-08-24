@@ -18,7 +18,7 @@
                       <td class="center">{{tweet.likes == 0 ? '-' : tweet.likes}}</td>
                       <td class="center">{{tweet.replies == 0 ? '-' : tweet.replies}}</td>
                       <td class="center">{{tweet.retweets == 0 ? '-' : tweet.retweets}}</td>
-                      <td class="center">{{tweet.hashtags.length == 0 ? '-' : hashtagLimit(tweet.hashtags)}}</td>
+                      <td class="center">{{tweet.hashtags.length == 0 ? '-' : tweet.hashtags | hashtagLimit}}</td>
                       <td>{{tweet.date | dateFormat}}</td>
                     </tr>
                   </tbody>
@@ -38,9 +38,4 @@
                 autoHide="false"
                 >
               </pagination-controls>
-              <!-- <div *ngIf="tweets.length != 0" class="pagi">
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">></a>
-              </div> -->
             </div>

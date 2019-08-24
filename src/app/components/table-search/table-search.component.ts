@@ -16,11 +16,9 @@ export class TableSearchComponent implements OnInit {
    }
 
   ngOnInit() {
-    //console.log(this.searchType)
   }
 
   sendSearchString() {
-    //alert('hello world')
     this.searchStringEvent.emit(this.searchString);
   }
 
